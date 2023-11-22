@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Counter</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'gilroy';
+    }
+    body {
+      height: 100%;
+      width: 100%;
+      display: grid;
+      place-items: center;
+    }
+    #counterCard {
+      height: 200px;
+      width: 400px;
+      background: linear-gradient(#eba, #e72222);
+      border-radius: 20px;
+      text-align: center;
+    }
+  
+    .buttonsContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .buttonsContainer button {
+      text-align: center;
+      padding: 4px;
+    }
+  </style>
+  
+</head>
+<body>
+  <div id="counterCard">
+    <!-- Counter Title -->
+    <h1>Counter</h1>
+    <br />
+    <!-- Display Count -->
+    <h1 class="countDisplay">1</h1>
+    <br />
+    <!-- Buttons for Operations -->
+    <div class="buttonsContainer">
+      <button class="increaseBtn">Increase</button>
+      <button class="resetBtn">Reset</button>
+      <button class="decreaseBtn">Decrease</button>
+    </div>
+  </div>
+
+  <script>
+    // Get elements and store them in variables
+    const countDisplay = document.querySelector(".countDisplay");
+    const increaseBtn = document.querySelector(".increaseBtn");
+    const resetBtn = document.querySelector(".resetBtn");
+    const decreaseBtn = document.querySelector(".decreaseBtn");
+
+    // Function to increase the count
+    function increaseCount() {
+      let currentValue = parseInt(countDisplay.textContent);
+      let newValue = currentValue + 1;
+      countDisplay.textContent = newValue;
+    }
+
+    // Function to decrease the count
+    function decreaseCount() {
+      let currentValue = parseInt(countDisplay.textContent);
+      let newValue = currentValue - 1;
+      countDisplay.textContent = newValue;
+    }
+
+    // Function to reset the count
+    function resetCount() {
+      countDisplay.textContent = "0";
+    }
+
+    // Event listeners for each button
+    increaseBtn.addEventListener('click', increaseCount);
+    decreaseBtn.addEventListener('click', decreaseCount);
+    resetBtn.addEventListener('click', resetCount);
+  </script>
+</body>
+</html>
