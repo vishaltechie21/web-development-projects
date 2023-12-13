@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'gilroy';
+
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+}
+
+.phone {
+    height: 480px;
+    width: 300px;
+    background-color: aliceblue;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid black;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    padding: 6px;
+    border-bottom: 1px solid black;
+    background: #08e713;
+    font-size: large;
+    box-shadow: none;
+}
+
+#input-box{
+    
+  width: 100%;  
+}
+#input{
+   width :90% ;
+    height: 40px;
+    box-shadow: 2px 1px 30px green;
+    margin-top: 15px;
+    border-top-left-radius: 10px;
+    text-align: center;
+    border: 2px double green;
+    margin-left: 2px;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+.rotate {
+    animation: rotateAnimation 1s linear ;
+   
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+button{
+    width: 23px;
+    height: 40px;
+    background: #3bf35a;
+    font-size: 15;
+    place-items: left;
+}
+
+/* for circle  */
+.circle {
+    width: 250px; /* Diameter of the circle */
+    height: 250px; /* Diameter of the circle */
+    background-color: #1cdf46; /* Circle background color */
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow: 2px 1px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.button {
+    width: 45px; /* Button size */
+    height: 45px; /* Button size */
+    background-color: rgb(250, 247, 247); /* Button background color */
+    border-radius: 50%; /* Make buttons circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    box-shadow: inset 1px 1px 20px red;.button:hover {
+        background-color: #0056a0; /* Button background color on hover */
+    }
+}
+
+.button:hover {
+    background-color: #dbfc22; /* Button background color on hover */
+}
+.button1{
+    position:relative;
+    font-size: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.button1:hover {
+    background-color: #f32c2cbe; /* Button background color on hover */
+}
+/* Arrange buttons evenly around the circle */
+.button:nth-child(1) { transform: rotate(0deg) translate(85px) rotate(0deg); }
+.button:nth-child(2) { transform: rotate(36deg) translate(85px) rotate(-36deg); }
+.button:nth-child(3) { transform: rotate(72deg) translate(85px) rotate(-72deg); }
+.button:nth-child(4) { transform: rotate(108deg) translate(85px) rotate(-108deg); }
+.button:nth-child(5) { transform: rotate(144deg) translate(85px) rotate(-144deg); }
+.button:nth-child(6) { transform: rotate(180deg) translate(85px) rotate(-180deg); }
+.button:nth-child(7) { transform: rotate(216deg) translate(85px) rotate(-216deg); }
+.button:nth-child(8) { transform: rotate(252deg) translate(85px) rotate(-252deg); }
+.button:nth-child(9) { transform: rotate(288deg) translate(85px) rotate(-288deg); }
+.button:nth-child(10) { transform: rotate(324deg) translate(85px) rotate(-324deg); }

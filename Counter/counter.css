@@ -1,0 +1,47 @@
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "gilroy";
+      }
+      body {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        background: black;
+      }
+      #counterCard {
+        height: 200px;
+        width: 400px;
+        background-color: white;
+        color: black;
+        margin-top: 50px;
+        background: linear-gradient(#eba, #e72222);
+        border-radius: 20px;
+        text-align: center;
+      }
+
+      .buttonsContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 20px;
+      }
+      .buttonsContainer button {
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        box-sizing: 10 10 20px rgba(0, 0, 0, 0.253),
+          inset -10px -10px 20px #ffffff48;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        transition: all ease .3s;
+      }
+      .h1:hover{
+        /* background: #ce8949; */
+        transform: scale(120%);
+        font-family: monospace;
+      }

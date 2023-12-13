@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "gilroy";
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+:root {
+  --primary: rgba(12, 43, 221, 0.631);
+}
+h1 {
+  text-align: center;
+  font-family: monospace;
+}
+.line {
+  width: 40px;
+  height: 4px;
+  border-radius: 5px;
+  background: var(--primary);
+  margin: auto;
+}
+#card {
+  width: 450px;
+  /* height: 400px; */
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  box-shadow: 0 0 20px #c6ed9e;
+  border-radius: 5px;
+  position: relative;
+}
+.coma {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: 15px;
+  left: 42%;
+  border-radius: 50%;
+  padding: 3px; /* Adjusted padding */
+  background-color: white;
+  background: var(--primary);
+  text-align: center;
+  font-size: 30px; /* Adjusted font size */
+  line-height: 0px;
+  color: #fff;
+}
+
+.img-data img {
+  height: 80px;
+  width: 80px;
+  /* border: 2px solid red; */
+  box-shadow: 5px -3.5px 1px var(--primary);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+a {
+  text-decoration: none;
+  font-size: small;
+}
+p {
+  font-style: italic;
+  padding-top: 5px;
+}
+h3 {
+  font-family: monospace;
+  letter-spacing: 2px;
+}
+.swipe {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  width: 60px;
+  letter-spacing: 13px;
+  /* border: 3px solid sienna; */
+}
+
+#left,
+#right {
+  height: 30px;
+  width: 15px;
+  font-size: larger;
+  border: none;
+  background: #fff;
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: 1000;
+}
+#suprise {
+  margin-top: 10px;
+  height: 25px;
+  /* width: 50px; */
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-align: center;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 5px;
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 10px var(--primary);
+}

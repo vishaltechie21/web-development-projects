@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <div class="box">
+      <input type="text" value="" id="input" />
+      <button onclick="calResult()" class="cal">=</button>
+      <button onclick="clr()" class="clr">Clr</button>
+    </div>
+    <script>
+      // Select the input field
+      let result = document.querySelector("#input");
+
+      // Function to append a number to the input field
+      function appendNumber(number) {
+        result.value += number;
+      }
+
+      // Function to calculate the result of the expression in the input field
+      function calResult() {
+        try {
+          result.value = eval(result.value);
+        } catch (error) {
+          alert("Invalid input");
+        }
+      }
+
+      // Function to clear the input field
+      function clr() {
+        result.value = "";
+      }
+    </script>
+  </body>
+</html>

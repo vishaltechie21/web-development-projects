@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="container">
+        <div class="Clock">
+          <span id="hrs">00</span>
+          <span>:</span>
+          <span id="min">00</span>
+          <span>:</span>
+          <span id="sec">00</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+              let hrs = document.querySelector("#hrs");
+              let min = document.querySelector("#min");
+              let sec  = document.querySelector("#sec");
+
+      setInterval(()=>{
+          let currentTime = new Date();
+
+
+              // get correct time
+              hrs.innerHTML = currentTime.getHours();
+              min.innerHTML = currentTime.getMinutes();
+              sec.innerHTML = currentTime.getSeconds();
+      },1000)
+    </script>
+  </body>
+</html>

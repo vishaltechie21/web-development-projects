@@ -1,0 +1,40 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "gilroy";
+}
+body{
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#box {
+    margin-top: 10%;
+  height: 40px;
+  width: 200px;
+  background: #000;
+  margin-left: 20px;
+  transition: background-color 0.3s ease; /* Added transition effect */
+}
+.change {
+  height: 40px;
+  width: 120px;
+  background: #007bff;
+  margin-top: 20px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transition effect and hover effect */
+}
+.change:hover {
+  background: #0056b3;
+  transform: scale(1.05); /* Scale effect on hover */
+}

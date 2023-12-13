@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #dil {
+            height: 90px;
+            width: 90px;
+            background: #ec0404;
+            animation: dil 5s linear infinite;
+            position: relative;
+        }
+
+        @keyframes dil {
+            0% {
+                transform: rotate(45deg);
+            }
+            50% {
+                transform: rotate(90deg);
+            }
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+
+        #dil::before {
+            content: "";
+            height: 90px;
+            width: 90px;
+            background: #fd0000;
+            position: absolute;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="dil"></div>
+</body>
+</html>

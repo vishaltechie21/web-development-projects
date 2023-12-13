@@ -1,0 +1,82 @@
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "gilroy";
+      }
+      body,
+      html {
+        height: 100%;
+        width: 100%;
+      }
+      #card {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        color: #fff;
+        height: 60px;
+        background: #000;
+        padding: 20px;
+        transition: all ease 0.5s;
+      }
+      h1 {
+        font-family: monospace;
+      }
+      .toggle {
+        position: absolute;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #card .items span {
+        position: relative;
+        text-transform: uppercase;
+        padding: 5px;
+        font-size: 16px;
+        font-family: monospace;
+      }
+
+      #card .items span:hover {
+        color: purple;
+      }
+
+      .btn {
+        display: none;
+      }
+
+      @media (min-width: 992px) and (max-width : 1200px){
+        #card .items span {
+          padding: 12px;
+        }
+}
+
+      @media (max-width: 600px) {
+        .btn {
+          display: block;
+          width: 30px;
+          height: 20px;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+        }
+        #card .items {
+          display: none;
+        }
+
+        .toggle {
+          display: block;
+          width: 30px; /* Adjust width as needed */
+          height: 20px; /* Adjust height as needed */
+          cursor: pointer;
+          position: relative;
+        }
+        .toggle span {
+          display: block;
+          height: 3px;
+          background: #fff;
+          margin-bottom: 5px;
+        }
+      }
+    
