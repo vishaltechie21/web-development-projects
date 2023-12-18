@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'gilroy'; /* Make sure 'gilroy' is the correct font name */
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.layout {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(rgb(250, 51, 51), rgb(245, 11, 233));
+    gap: 10px;
+    font-family:monospace ;
+}
+
+.box {
+    margin-top: 10px;
+    position: relative;
+    background: #b110c0;
+    width: 98%;
+    max-width: 1440px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    cursor: pointer;
+}
+
+p span {
+    color: rgb(245, 241, 5);
+}
+
+.ques {
+    color: #000000; 
+    line-height: 1.5em;
+    word-break: break-all;
+    font-weight: 900;
+    padding: 5px;
+    background: transparent;
+    transition: all 200ms;
+    text-wrap: wrap;
+
+}
+
+.ans  {
+    display: none;
+}
+
+.ans.active {
+    display: block;
+    letter-spacing: 2px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: left;
+    padding: 10px;
+    text-shadow: 1px 0 40px #ff0202;
+    color: #fff;
+    font-size: 0.9em;
+    border-radius: 20px;
+    background: linear-gradient(rgb(238, 101, 124),rgba(248, 154, 154, 0.932));
+    text-wrap:balance;
+    margin: auto;
+}
+
+@media (max-width:320px) {
+    .ques {
+        font-size: 12px;
+        text-wrap: wrap;
+        }
+        .ans.active{
+            font-size: 10px;
+            background: #000;
+        }
+}
