@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scrolling Play Button</title>
+  <style>
+    body{
+      background: #000;
+    }
+    #playBtn {
+     position: fixed;
+     right: 20px;
+     bottom: 20px;
+     padding: 20px;
+     border: none;
+     background: #fff;
+     color: #000;
+     font-size: 16px;
+     border-radius: 20px;
+     font-weight: 700;
+     cursor: pointer;
+     z-index: 1000;
+     transition: transform .3s ease-in-out,width .3s ease-in-out,height .3s ease-in-out;
+    }
+
+      @keyframes playButtonScale {
+        0%{transform: scale(1);}
+        50%{transform: scale(.9);}
+        100%{transform: scale(1);}
+      }
+      #playBtn.active span{
+        transition: text .9s ease;
+       display: none;
+        
+      }
+      #playBtn.active{
+       padding: 20px;
+        animation: playButtonScale 1s forwards;
+        }
+
+  </style>
+</head>
+<body>
+  <button class="play-btn" id="playBtn">▶ <span>Play something</span></button>
+  <div style="height: 2000px;"></div>
+
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var play = document.getElementById("playBtn");
+      
+      if(scrollY > scrollX){
+        // Downward scrolling
+        if(!play.classList.contains('active')){
+          play.classList.add('active');
+          }
+          }else{
+            // Sideways scrolling or upward scrolling
+            if(play.classList.contains('active')){
+              play.classList.remove('active');
+              }
+      }
+    });
+
+  </script>
+</body>
+</html>
